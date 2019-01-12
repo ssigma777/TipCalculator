@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lbl_BillAmount"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Bill Amount"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_Percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_Percent"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Percent"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_Tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_BillAmount" />
+
+    <TextView
+        android:id="@+id/lbl_Tip"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Tip"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_Total"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Percent" />
+
+    <TextView
+        android:id="@+id/lbl_Total"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="251dp"
+        android:text="Total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Tip" />
+
+    <EditText
+        android:id="@+id/etxt_BillAmount"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/lbl_BillAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Percent"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:text="1"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/lbl_Percent"
+        app:layout_constraintTop_toBottomOf="@+id/etxt_BillAmount" />
+
+    <TextView
+        android:id="@+id/tv_Tip"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:text="2"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/lbl_Tip"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Percent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="77dp" />
+
+    <Button
+        android:id="@+id/btn_Minus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="3dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Plus"
+        app:layout_constraintStart_toEndOf="@+id/tv_Percent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="124dp"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/btn_Minus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Total"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="57dp"
+        android:text="3"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Tip" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="188dp"
+        android:layout_height="9dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Total"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
